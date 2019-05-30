@@ -56,7 +56,6 @@ The idea is to strip extra tokens from the file 'txt.done.data' and have just $f
 ```text
 ### Prepare data
 cat etc/txt.done.data | tr '(' ' ' | tr ')' ' ' | tr '"' ' ' > etc/tdd
-mkdir -p data/dataprep_tacotron1
-python3.5 $FALCONDIR/prepare_data.py etc/tdd data/dataprep_tacotron1 wav
+python3.5 $FALCONDIR/prepare_data.py etc/tdd .
 ```
 
