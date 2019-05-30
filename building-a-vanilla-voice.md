@@ -67,8 +67,10 @@ python3.5 $FALCONDIR/prepare_data.py etc/tdd .
 python3.5 $FALCONDIR/train_tacotronone.py --data-root ./etc --checkpoint-dir /home1/srallaba/development/falcon_stuff/baseline_rms/checkpoints_baseline > log_tacotronone_baseline 2>&1&Test Synthesis
 ```
 
+#### Testing
+
 ```text
-python3.5 $FALCONDIR/synthesize_tacotronone.py checkpoints_baseline/checkpoint_step5000.pth etc/tdd.test tts_baseline    
+python3.5 $FALCONDIR/synthesize_tacotronone.py /home1/srallaba/development/falcon_stuff/baseline_rms/checkpoints_baseline/checkpoint_step10000.pth etc/tdd.test tts_baseline    
 ```
 
 
