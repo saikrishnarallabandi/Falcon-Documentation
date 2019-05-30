@@ -60,3 +60,9 @@ python3.5 $FALCONDIR/prepare_data.py etc/tdd .
 ./bin/traintest etc/txt.done.data.tacotron
 ```
 
+#### Training
+
+```text
+python3.5 $FALCONDIR/train_tacotronone.py --data-root ./etc --checkpoint-dir checkpoints_baseline > log_tacotronone_baseline 2>&1&
+```
+
