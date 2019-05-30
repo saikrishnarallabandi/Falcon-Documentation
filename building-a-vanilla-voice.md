@@ -83,6 +83,7 @@ The idea is to use the file 'txt.phseq.data' and have just $fname ' ' $text. The
 
 ```text
 python3.5 $FALCONDIR/prepare_data_phseq.py ehmm/etc/txt.phseq.data . > log_phdataprep 2>&1&
+./bin/traintest etc/txt.done.data.tacotron.phseq
 ```
 
 #### Training
