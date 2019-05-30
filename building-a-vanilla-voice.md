@@ -58,6 +58,7 @@ The idea is to strip extra tokens from the file 'txt.done.data' and have just $f
 cat etc/txt.done.data | tr '(' ' ' | tr ')' ' ' | tr '"' ' ' > etc/tdd
 python3.5 $FALCONDIR/prepare_data.py etc/tdd .
 ./bin/traintest etc/txt.done.data.tacotron
+./bin/traintest etc/tdd 
 ```
 
 #### Training
@@ -69,7 +70,8 @@ python3.5 $FALCONDIR/train_tacotronone.py --data-root ./etc --checkpoint-dir che
 #### Test Synthesis
 
 ```text
-cat etc/txt.done.data.tacotron.test | cut -d'|' -f 4 > test_chars.txt
-
+python3.5 $FALCONDIR/synthesize_tacotronone.py checkpoints_baseline/checkpoint_step5000.pth etc/tdd.test tts_baseline    
 ```
+
+
 
