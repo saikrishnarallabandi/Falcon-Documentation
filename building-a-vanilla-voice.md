@@ -73,5 +73,29 @@ python3.5 $FALCONDIR/train_tacotronone.py --data-root ./etc --checkpoint-dir /ho
 python3.5 $FALCONDIR/synthesize_tacotronone.py /home1/srallaba/development/falcon_stuff/baseline_rms/checkpoints_baseline/checkpoint_step10000.pth etc/tdd.test tts_baseline    
 ```
 
+### Building a vanilla phone level model
 
+We follow a three step procedure: Data preparation, Training and Testing
+
+#### Data Preparation
+
+The idea is to use the file 'txt.phseq.data' and have just $fname ' ' $text. Then we can iterate through the files and extract linear and mel spectra. 
+
+```text
+python3.5 $FALCONDIR/prepare_data_phseq.py ehmm/etc/txt.phseq.data . > log_phdataprep 2>&1&
+```
+
+#### Training
+
+```text
+python3.5 train_tacotronone_phones.py --data-root ./etc --checkpoint-dir checkpoints_ljspeechbaseline_phones > log_tacotronone_phones 2>&1&
+```
+
+#### Testing
+
+```text
+python3.5 $FALCONDIR/synthesize_tacotronone_phones.py checkpoints_ljspeechbaseline_phones/checkpoint_step25000.pth etc/txt.done.data.tacotron.phseq.test tts_phones
+```
+
+## 
 
