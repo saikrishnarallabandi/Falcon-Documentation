@@ -57,5 +57,6 @@ The idea is to strip extra tokens from the file 'txt.done.data' and have just $f
 ### Prepare data
 cat etc/txt.done.data | tr '(' ' ' | tr ')' ' ' | tr '"' ' ' > etc/tdd
 python3.5 $FALCONDIR/prepare_data.py etc/tdd .
+./bin/traintest etc/txt.done.data.tacotron
 ```
 
