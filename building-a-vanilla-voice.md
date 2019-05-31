@@ -73,9 +73,7 @@ python3.5 $FALCONDIR/train_tacotronone.py --data-root ./etc --checkpoint-dir /ho
 python3.5 $FALCONDIR/synthesize_tacotronone.py /home1/srallaba/development/falcon_stuff/baseline_rms/checkpoints_baseline/checkpoint_step10000.pth etc/tdd.test tts_baseline    
 ```
 
-#### Samples
-
-samples can be found [here](http://tts.speech.cs.cmu.edu/rsk/development/falcon/kitchens/kitchen_tacotron/tts_baseline/)
+[Samples](http://tts.speech.cs.cmu.edu/rsk/development/falcon/kitchens/kitchen_tacotron/tts_baseline/)
 
 ### Building a vanilla phone level model
 
@@ -102,7 +100,7 @@ python3.5 train_tacotronone_phones.py --data-root ./etc --checkpoint-dir checkpo
 python3.5 $FALCONDIR/synthesize_tacotronone_phones.py checkpoints_ljspeechbaseline_phones/checkpoint_step25000.pth etc/txt.done.data.tacotron.phseq.test tts_phones
 ```
 
-
+[Samples](http://tts.speech.cs.cmu.edu/rsk/development/falcon/kitchens/kitchen_tacotron/tts_phones/)
 
 ## 
 
