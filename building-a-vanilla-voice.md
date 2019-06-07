@@ -97,7 +97,7 @@ python3.5 train_tacotronone_phones.py --data-root ./etc --checkpoint-dir checkpo
 #### Testing
 
 ```text
-python3.5 $FALCONDIR/synthesize_tacotronone_phones.py checkpoints_ljspeechbaseline_phones/checkpoint_step25000.pth etc/txt.done.data.tacotron.phseq.test tts_phones
+python3.5 $FALCONDIR/synthesize_tacotronone_phones.py checkpoints_ljspeechbaseline_phones/checkpoint_step25000.pth ehmm/etc/txt.phseq.data.test tts_phones
 ```
 
 [Samples](http://tts.speech.cs.cmu.edu/rsk/development/falcon/kitchens/kitchen_tacotron/tts_phones/)
