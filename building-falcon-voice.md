@@ -20,5 +20,10 @@ python3.5 synthesize_tacotronone.py checkpoints_seqwise/checkpoint_step110000.pt
 
 ```text
 export PYTHONIOENCODING=UTF-8
+python3.5 $FALCONDIR/dataprep_addindiantext.py etc/tdd .
+./bin/traintest etc/tdd 
+cat etc/tdd.train | cut -d' ' -f 1 > fnames.train
+cat etc/tdd.test | cut -d' ' -f 1 > fnames.val
+python3.5 train_indian.py --data-root ./etc --checkpoint-dir checkpoints_indian > log_indian 2>&1&
 ```
 
