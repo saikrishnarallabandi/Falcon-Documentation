@@ -16,3 +16,9 @@ python3.5 $FALCONDIR/train_tacotronseqwise.py --data-root etc --checkpoint-dir c
 python3.5 synthesize_tacotronone.py checkpoints_seqwise/checkpoint_step110000.pth test.txt tts_seqwise
 ```
 
+### Building Indian Voice
+
+```text
+export PYTHONIOENCODING=UTF-8
+```
+
